@@ -7,9 +7,10 @@ import ClassifyTab from './components/ClassifyTab'
 import BatchTab from './components/BatchTab'
 import BenchmarkTab from './components/BenchmarkTab'
 import AboutTab from './components/AboutTab'
-
+import AnalyticsTab from './components/AnalyticsTab'
 const TABS = [
   { id: 'classify', label: 'Classify' },
+  { id: 'analytics', label: 'Analytics' },
   { id: 'batch', label: 'Batch' },
   { id: 'benchmark', label: 'Benchmark' },
   { id: 'about', label: 'About' },
@@ -20,6 +21,7 @@ export default function App() {
 
   const content = useMemo(() => {
     if (tab === 'batch') return <BatchTab />
+    if (tab === 'analytics')  return <AnalyticsTab />
     if (tab === 'benchmark') return <BenchmarkTab />
     if (tab === 'about') return <AboutTab />
     return <ClassifyTab />
